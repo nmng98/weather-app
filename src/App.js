@@ -46,21 +46,22 @@ function App() {
     let converted = w * 1.8 + 32;
     return Math.round(converted)
   }
+
   // , {weather.sys.country}
+
   return (
     <div className = 
     // IF WEATHER DEFINED, CHANGE BACKGROUND OF APP 
     // BASED ON THE TEMPERATURE
-      {(typeof weather.main != "undefined") 
-      ? ((weather.main.temp > 16 ) 
-      ? 'app warm' : 'app ')
-      :'app'}>
+      {(typeof weather.main != "undefined") ? 
+      ((weather.main.temp > 16) ? 'app warm' : 'app')
+      : 'app'}>
       <main>
         <div className = "search-box">
           <input 
             type = "text"
             className = "search-bar"
-            placeholder = "Search..."
+            placeholder = "Search Location..."
             onChange = {e => setQuery(e.target.value)}
             value = {query}
             onKeyPress = {search}
@@ -78,6 +79,9 @@ function App() {
                 
               </div>
               <div className = "weather">{weather.weather[0].main}</div>
+              <div className = "humidity">Humidity: {weather.main.humidity}% </div>
+              <div className = "wind">Wind: {weather.wind.speed} mph </div>
+              <div className = "feels-like">Feels Like: {fahrenheitConvert(weather.main.feels_like)}°F</div>
             </div>
           </div>
         ) : ('')}

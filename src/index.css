@@ -15,8 +15,12 @@ body {
   transition: .4s ease;
 }
 
-.app.warm {
+.app .warm {
   background-image: url('./assets/warmest.png');
+}
+
+.app .reg {
+  background-image: url('./assets/location.png');
 }
 
 main {
@@ -60,7 +64,7 @@ main {
 .location-box .location {
   color: #FFF;
   padding-top: 10px;
-  font-size: 40px;
+  font-size: 45px;
   font-weight: 500;
   text-align: center;
   text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
@@ -102,5 +106,29 @@ main {
   color: #FFF;
   font-size: 48px;
   font-weight: 700;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.weather-box .humidity {
+  padding-top: 40px;
+  color: #FFF;
+  font-size: 25px;
+  font-weight: 300;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.weather-box .wind {
+  padding-top: 20px;
+  color: #FFF;
+  font-size: 25px;
+  font-weight: 300;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.weather-box .feels-like {
+  padding-top: 20px;
+  color: #FFF;
+  font-size: 25px;
+  font-weight: 300;
   text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
