@@ -15,12 +15,8 @@ body {
   transition: .4s ease;
 }
 
-.app .warm {
+.app.warm {
   background-image: url('./assets/warmest.png');
-}
-
-.app .reg {
-  background-image: url('./assets/location.png');
 }
 
 main {
